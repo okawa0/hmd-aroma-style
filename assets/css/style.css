@@ -1,0 +1,272 @@
+/* ========================================
+   Base（納屋橋キック流用）
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/noto-sans-jp-v56-japanese_latin-regular.woff2")
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  src: url("assets/fonts/noto-sans-jp-v56-japanese_latin-500.woff2")
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("assets/fonts/noto-sans-jp-v56-japanese_latin-700.woff2")
+    format("woff2");
+}
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  scroll-behavior: smooth;
+}
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+}
+button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: inherit;
+  text-transform: none;
+  appearance: none;
+  -webkit-appearance: none;
+  /* iOS/Safari */
+  cursor: pointer;
+}
+
+:root {
+  --root__side-padding: 5vw;
+  --root__max-width: 1366px;
+}
+@media (min-width: 767px) {
+  :root {
+    --root__side-padding: 8vw;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --root__side-padding: calc((100vw - var(--root__max-width)) / 2);
+  }
+}
+
+/* =====================
+  Header
+===================== */
+
+@font-face {
+  font-family: "SourceHanSerif";
+  src: url("/assets/fonts/SourceHanSerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-base: "SourceHanSerif", serif;
+}
+
+body {
+  font-family: var(--font-base);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url("../images/bg-leather.webp");
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 80px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header__logo img {
+  display: block;
+  width: 160px;
+  height: auto;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__list {
+  display: flex;
+  gap: 24px;
+}
+
+.header__link {
+  color: #D4B96A;
+  text-decoration: none;
+}
+
+.header__button {
+  display: none;
+  padding: 8px 16px;
+  background: #D4B96A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.header__menu {
+  background: none;
+  border: none;
+}
+
+/* =====================
+  Hero
+===================== */
+
+.hero {
+  position: relative;
+  margin-top: 72px;
+}
+
+.hero__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+  text-align: center;
+}
+
+.hero__catch {
+  margin: 0;
+  font-size: 20px;
+  color: #D4B96A;
+  line-height: 1.6;
+}
+
+.hero__title {
+  margin-top: 16px;
+}
+
+.hero__title img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* =====================
+  Branding
+===================== */
+
+.branding {
+  padding: 64px 16px;
+  background-image: url("../images/bg-leather.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.branding__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.branding__title {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.branding__lead {
+  margin-top: 24px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.8;
+}
+
+.branding__text {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.8;
+}
+
+/* =====================
+  Tablet
+===================== */
+
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: block;
+  }
+
+  .header__button {
+    display: inline-block;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .hero__catch {
+    font-size: 28px;
+  }
+
+  .branding {
+    padding: 80px 24px;
+  }
+}
+
+/* =====================
+  PC
+===================== */
+
+@media screen and (min-width: 1024px) {
+  .hero__catch {
+    font-size: 32px;
+  }
+
+  .branding__title {
+    font-size: 32px;
+  }
+
+  .branding__text {
+    font-size: 16px;
+  }
+}
