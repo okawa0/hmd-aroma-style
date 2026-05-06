@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AromaStyle</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preload" href="./assets/js/main.js" as="script" />
+    <script src="./assets/js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -18,24 +20,39 @@
           />
         </h1>
 
-        <div class="header__actions">
-          <nav class="header__nav">
-            <ul class="header__list">
-              <li class="header__item">
-                <a href="#" class="header__link">香りマーケティング</a>
-              </li>
-              <li class="header__item">
-                <a href="#" class="header__link">メリット</a>
-              </li>
-              <li class="header__item">
-                <a href="#" class="header__link">ディフューザー</a>
-              </li>
-            </ul>
-          </nav>
-          <a href="#" class="header__button">お問い合わせ</a>
-        </div>
+        <button
+          type="button"
+          class="header__hamburger"
+          data-js="hamburger"
+          aria-controls="global-menu"
+          aria-expanded="false"
+          aria-label="メニューを開く"
+        >
+          <img
+            src="./assets/images/hamburger-button-tentative.png"
+            alt="ハンバーガーボタン(仮)"
+            width="24"
+            height="18"
+          />
+          <span class="header__hamburger-line"></span>
+          <span class="header__hamburger-line"></span>
+          <span class="header__hamburger-line"></span>
+        </button>
 
-        <button class="header__menu" type="button"></button>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link">香りマーケティング</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">メリット</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">ディフューザー</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#" class="header__button">お問い合わせ</a>
       </div>
     </header>
 
@@ -101,11 +118,12 @@
           </p>
 
           <p class="branding__text">
-            香りによるブランディングとは、単に心地よい香りで空間を満たすだけではありません。<br/>企業のブランド・アイデンティティを確立したり、消費者にインパクトのあるメッセージを伝えたり、より訴求力を高めたりする、一種のアートなのです。
+            香りによるブランディングとは、単に心地よい香りで空間を満たすだけではありません。<br />企業のブランド・アイデンティティを確立したり、消費者にインパクトのあるメッセージを伝えたり、より訴求力を高めたりする、一種のアートなのです。
           </p>
 
           <p class="branding__text">
-            香りを取り入れることで、ブランドとお客様のつながりはより深まり、商品価値が一層高く感じられ、店内での滞在時間も自然と長くなり、結果として 売上の向上にもつながります。
+            香りを取り入れることで、ブランドとお客様のつながりはより深まり、商品価値が一層高く感じられ、店内での滞在時間も自然と長くなり、結果として
+            売上の向上にもつながります。
           </p>
 
           <p class="branding__text">
