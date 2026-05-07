@@ -1,5 +1,5 @@
   const hamburger = document.querySelector('[data-js="hamburger"]');
-  const navMenu = document.getElementById('nav-menu');
+  const navMenu = document.querySelector('[data-js="nav-menu"]');
 
   hamburger.addEventListener('click', () => {
     const isOpen = hamburger.classList.toggle('is-open');

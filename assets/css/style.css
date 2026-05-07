@@ -131,6 +131,10 @@ button {
   --duration-slow: 0.8s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-base);
   color: var(--color-text);
@@ -148,22 +152,20 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 50px;
   background-image: url("../images/bg-leather.webp");
   background-size: cover;
   background-position: center;
   z-index: 1000;
-}
-
-.header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 16px 8px 8px;
+  padding-inline: 8px 16px;
 }
 
 .header__logo {
   display: block;
-  width: 160px;
+  width: 120px;
   height: auto;
 }
 
@@ -206,7 +208,30 @@ body {
 }
 
 .header__nav {
-  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #1a1a1a;
+  z-index: 90;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--duration-slow) var(--ease-heavy),
+    transform var(--duration-slow) var(--ease-heavy),
+    visibility 0s linear var(--duration-slow);
+}
+
+.header__nav.is-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity var(--duration-slow) var(--ease-heavy),
+    transform var(--duration-slow) var(--ease-heavy),
+    visibility 0s linear;
 }
 
 .header__list {
@@ -238,7 +263,7 @@ body {
 
 .hero {
   position: relative;
-  margin-top: 64px;
+  margin-top: 50px;
 }
 
 .hero__image img {
@@ -415,6 +440,10 @@ body {
     opacity: 1;
     transition: none; /* またはホバーアニメーション用のtransitionを上書き */
     padding: 0; /* PC用の余白にリセット */
+  }
+
+  .hero {
+    scroll-margin-top: 80px;
   }
 
   .hero__panel {
