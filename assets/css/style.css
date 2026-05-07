@@ -178,8 +178,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  width: 24px;
+  width: 22px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .header__hamburger-line {
@@ -188,12 +189,12 @@ body {
   height: 2px;
   background-color: var(--color-text--accent);
   transition:
-    transform 0.4s var(--ease-heavy),
+    transform 0.4s ease,
     opacity 0.4s ease;
 }
 
 .header__hamburger.is-open .header__hamburger-line:nth-child(1) {
-  transform: translateY(11px) rotate(35deg);
+  transform: translateY(10px) rotate(35deg);
 }
 
 .header__hamburger.is-open .header__hamburger-line:nth-child(2) {
@@ -201,7 +202,7 @@ body {
 }
 
 .header__hamburger.is-open .header__hamburger-line:nth-child(3) {
-  transform: translateY(-9px) rotate(-35deg);
+  transform: translateY(-10px) rotate(-35deg);
 }
 
 .header__nav {
