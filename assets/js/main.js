@@ -6,6 +6,7 @@
     navMenu.classList.toggle('is-open', isOpen);
     hamburger.setAttribute('aria-expanded', isOpen);
     hamburger.setAttribute('aria-label', isOpen ? 'メニューを閉じる' : 'メニューを開く');
+      document.body.style.overflow = 'hidden';
   });
 
   // リサイズ時にモバイルメニューの開閉状態をリセット
@@ -15,5 +16,6 @@
       navMenu.classList.remove('is-open');
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.setAttribute('aria-label', 'メニューを開く');
+      document.body.style.overflow = '';
     }
   });
