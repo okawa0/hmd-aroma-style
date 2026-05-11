@@ -1,4 +1,5 @@
-  const hamburger = document.querySelector('[data-js="hamburger"]');
+// ハンバーガーメニュー
+const hamburger = document.querySelector('[data-js="hamburger"]');
   const navMenu = document.querySelector('[data-js="nav-menu"]');
 
   hamburger.addEventListener('click', () => {

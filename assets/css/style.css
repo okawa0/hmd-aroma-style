@@ -275,9 +275,12 @@ body {
 
 /* #region Hero */
 
+.main {
+  padding-top: 50px;
+}
+
 .hero {
   position: relative;
-  margin-top: 50px;
 }
 
 .hero__image img {
@@ -407,67 +410,14 @@ body {
 /* #region min-width: 768px */
 
 @media screen and (min-width: 768px) {
-  .header__nav {
-    display: block;
-  }
-
-  .header__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 80px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .header__button {
-    display: inline-block;
-  }
-
-  .header__menu {
-    display: none;
-  }
-
-  /* ハンバーガーボタンを非表示 */
-  .header__hamburger {
-    display: none;
-  }
-
-  .header__nav {
-    max-width: none;
-    margin-bottom: 0;
-  }
-
-  .header__list {
-    border-top: none;
-  }
-
-  .header__item {
-    border-bottom: none;
-    overflow: visible; /* マスキング解除 */
-  }
-
-  .header__link,
-  .header__button {
-    /* テキストの非表示設定を解除 */
-    transform: none;
-    opacity: 1;
-    transition: none; /* またはホバーアニメーション用のtransitionを上書き */
-    padding: 0; /* PC用の余白にリセット */
-  }
-
-  .hero {
-    scroll-margin-top: 80px;
-  }
-
   .hero__panel {
     display: flex;
     justify-content: center;
     align-items: center;
     inset: 0;
     margin: auto;
-    width: 580px;
-    height: 230px;
+    width: 400px;
+    height: 160px;
     background-color: #333333e6;
   }
 
@@ -479,14 +429,77 @@ body {
 /* #endregion */
 
 /* ==========================
-  PC (min-width: 1024px)
+  PC (min-width: 1025px)
 =========================== */
 
-/* #region min-width: 1024px */
+/* #region min-width: 1025px */
 
-@media screen and (min-width: 1024px) {
-  .hero__catch {
-    font-size: 32px;
+@media screen and (min-width: 1025px) {
+  .header {
+    padding-inline: 80px;
+    height: 80px;
+  }
+
+  .header__logo {
+    width: 150px;
+  }
+
+  .header__hamburger {
+    display: none;
+  }
+
+  .header__nav {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .header__list {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    width: auto;
+  }
+
+  .header__item {
+    padding-block: 0;
+    border-top: none;
+  }
+
+  .header__link {
+    font-size: 18px;
+  }
+
+  .header__button {
+    padding: 8px 40px;
+    font-size: 18px;
+  }
+
+  .main {
+    padding-top: 80px;
+  }
+
+  .hero__text {
+    top: 8%;
+    right: 8%;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+
+  .hero__lead {
+    font-size: 30px;
+  }
+
+  .hero__panel {
+    width: 580px;
+    height: 230px;
   }
 
   .branding__title {
@@ -495,6 +508,10 @@ body {
 
   .branding__text {
     font-size: 16px;
+  }
+
+  .branding {
+    padding: 80px 24px;
   }
 }
 
