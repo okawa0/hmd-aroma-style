@@ -2,22 +2,23 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AromaStyle</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="preload" href="./assets/js/main.js" as="script" />
     <script src="./assets/js/main.js" defer></script>
   </head>
   <body>
     <header class="header">
       <h1 class="header__logo">
         <img
+          class="header__logo-image"
           src="./assets/images/logo.webp"
-          alt="AromaStyle HMD HOLDINGSのロゴ"
+          alt="AromaStyle HMD HOLDINGS"
           width="180"
           height="40"
         />
       </h1>
+
       <button
         type="button"
         class="header__hamburger"
@@ -32,8 +33,9 @@
       </button>
 
       <nav
-        data-js="nav-menu"
+        id="global-menu"
         class="header__nav"
+        data-js="nav-menu"
         aria-label="グローバルナビゲーション"
       >
         <ul class="header__list">
@@ -47,54 +49,52 @@
             <a href="#products" class="header__link">ディフューザー</a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__button">お問い合わせ</a>
+            <a href="/contact/" class="header__button">お問い合わせ</a>
           </li>
         </ul>
       </nav>
     </header>
+
     <main class="main">
       <section class="hero" id="hero">
-        <div class="hero__image">
-          <picture>
-            <source
-              srcset="./assets/images/hero-pc.webp"
-              media="(min-width: 768px)"
-              type="image/webp"
-            />
-            <img
-              src="./assets/images/hero-sp.webp"
-              alt="ディフューザーと植物のある室内イメージ"
-              width="1200"
-              height="700"
-            />
-          </picture>
-        </div>
+        <picture class="hero__image">
+          <source
+            srcset="./assets/images/hero-pc.webp"
+            media="(min-width: 767px)"
+            type="image/webp"
+          />
+          <img
+            class="hero__image-item"
+            src="./assets/images/hero-sp.webp"
+            alt="ディフューザーと植物のある室内イメージ"
+            width="1200"
+            height="700"
+          />
+        </picture>
 
         <div class="hero__text">
           <h2 class="hero__title">香りマーケティング</h2>
           <p class="hero__lead">
             <span class="hero__dash">―</span>
-            嗅覚を通して感情に訴える
-            <br />
-            &emsp;&nbsp;&nbsp;マーケティング
+            嗅覚を通して感情に訴える<br />
+            マーケティング
           </p>
         </div>
 
-        <div class="hero__panel">
-          <picture>
-            <source
-              srcset="./assets/images/hero-title-pc.webp"
-              media="(min-width: 768px)"
-              type="image/webp"
-            />
-            <img
-              src="./assets/images/hero-title-sp.webp"
-              alt="Bel Air Collection AromaStyle"
-              width="600"
-              height="200"
-            />
-          </picture>
-        </div>
+        <picture class="hero__panel">
+          <source
+            srcset="./assets/images/hero-title-pc.webp"
+            media="(min-width: 767px)"
+            type="image/webp"
+          />
+          <img
+            class="hero__panel-image"
+            src="./assets/images/hero-title-sp.webp"
+            alt="Bel Air Collection AromaStyle"
+            width="600"
+            height="200"
+          />
+        </picture>
       </section>
 
       <section class="branding">
@@ -103,9 +103,10 @@
 
           <img
             src="./assets/images/decoration-line.webp"
-            alt="装飾線"
+            alt=""
             width="44"
             height="14"
+            loading="lazy"
             class="branding__decoration-line"
           />
 
@@ -114,12 +115,11 @@
           </p>
 
           <p class="branding__text">
-            香りによるブランディングとは、単に心地よい香りで空間を満たすだけではありません。<br />企業のブランド・アイデンティティを確立したり、消費者にインパクトのあるメッセージを伝えたり、より訴求力を高めたりする、一種のアートなのです。
+            香りによるブランディングとは、単に心地よい香りで空間を満たすだけではありません。企業のブランド・アイデンティティを確立したり、消費者にインパクトのあるメッセージを伝えたり、より訴求力を高めたりする、一種のアートなのです。
           </p>
 
           <p class="branding__text">
-            香りを取り入れることで、ブランドとお客様のつながりはより深まり、商品価値が一層高く感じられ、店内での滞在時間も自然と長くなり、結果として
-            売上の向上にもつながります。
+            香りを取り入れることで、ブランドとお客様のつながりはより深まり、商品価値が一層高く感じられ、店内での滞在時間も自然と長くなり、結果として売上の向上にもつながります。
           </p>
 
           <p class="branding__text">
