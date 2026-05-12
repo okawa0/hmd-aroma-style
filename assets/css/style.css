@@ -425,6 +425,97 @@ body {
 
 /* #endregion */
 
+/* =====================
+  Concept
+===================== */
+
+/* #region Concept */
+
+.concept {
+  overflow: hidden;
+  width: 100%;
+}
+
+.concept__inner {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 0;
+  max-width: 1200px;
+}
+
+.concept__inner::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  background: #f9ede9;
+  content: "";
+}
+
+.concept__heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 50px;
+}
+
+.concept__heading-line {
+  flex-shrink: 0;
+  width: 60px;
+  height: 1px;
+  background: #c8855a;
+}
+
+.concept__title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #c8855a;
+}
+
+.concept__content {
+  position: relative;
+  display: grid;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.concept__image-item {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.concept__text {
+  display: grid;
+  gap: 24px;
+}
+
+.concept__paragraph {
+  margin: 0;
+  font-size: 14px;
+  line-height: 2;
+  color: #3a2a1a;
+}
+
+.concept__emphasis {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.concept__flow-image {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin-inline: auto;
+}
+
+/* #endregion */
+
 /* ==========================
   min-width: 767px
 =========================== */
@@ -455,6 +546,47 @@ body {
 
   .line-break {
     display: inline;
+  }
+
+  .concept__inner {
+    padding-block: 60px;
+  }
+
+  .concept__inner::before {
+    width: 80px;
+  }
+
+  .concept__heading {
+    gap: 20px;
+    padding-left: 100px;
+  }
+
+  .concept__heading-line {
+    width: 120px;
+  }
+
+  .concept__title {
+    font-size: 30px;
+    white-space: nowrap;
+  }
+
+  .concept__content {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    margin-top: 40px;
+  }
+
+  .concept__image {
+    padding-left: 100px;
+  }
+
+  .concept__text {
+    gap: 24px;
+  }
+
+  .concept__paragraph {
+    font-size: 15px;
   }
 }
 
