@@ -574,6 +574,45 @@ body {
 
 /* #endregion */
 
+/* =====================
+  Benefit
+===================== */
+
+/* #region Benefit */
+
+.benefit {
+  width: 100%;
+  padding-inline: 28px;
+}
+
+.benefit__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #f09278;
+  word-break: auto-phrase;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.benefit__image {
+  display: block;
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  margin: 32px auto;
+}
+
+.benefit__text {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  line-height: 2;
+}
+
+/* #endregion */
+
 /* ==========================
   min-width: 767px
 =========================== */
