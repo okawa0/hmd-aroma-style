@@ -539,6 +539,13 @@ body {
 .concept__example {
   position: relative;
   width: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #fee7d1 19%,
+    #fee7d1 80%,
+    transparent 100%
+  );
 }
 
 .concept__example-image {
@@ -562,7 +569,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   font-family: var(--font-sans);
-  line-height: 1.8;
+  line-height: 2.2;
 }
 
 /* #endregion */
@@ -634,6 +641,10 @@ body {
   .concept__title {
     font-size: 30px;
     white-space: nowrap;
+  }
+
+  .concept__title-br {
+    margin-left: 0;
   }
 
   .concept__content {
