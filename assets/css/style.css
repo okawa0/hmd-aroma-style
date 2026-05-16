@@ -601,7 +601,7 @@ body {
   width: 80%;
   max-width: 1000px;
   height: auto;
-  margin: 32px auto;
+  margin: 32px auto 16px;
 }
 
 .benefit__text {
@@ -609,6 +609,10 @@ body {
   font-weight: 500;
   font-family: var(--font-sans);
   line-height: 2;
+}
+
+.benefit__text-br {
+  display: none;
 }
 
 /* #endregion */
@@ -718,8 +722,31 @@ body {
     word-break: auto-phrase;
     text-wrap: balance;
   }
-}
+  .benefit {
+    padding-top: 32px;
+  }
 
+  .benefit__title {
+    font-size: 32px;
+  }
+
+  .benefit__image {
+    width: 60%;
+    margin: 48px auto;
+  }
+  .benefit__text {
+    text-align: center;
+    word-break: auto-phrase;
+    text-wrap: balance;
+    font-size: 18px;
+  }
+  .benefit__title-br {
+    display: none;
+  }
+  .benefit__text-br {
+    display: inline;
+  }
+}
 /* #endregion */
 
 /* ==========================
